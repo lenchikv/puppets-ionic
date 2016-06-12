@@ -1,0 +1,22 @@
+<ion-view view-title="{{toy.caption}}">
+<ion-nav-bar class="bar-balanced">
+  <ion-nav-back-button>
+  </ion-nav-back-button>
+</ion-nav-bar>
+  <ion-content>
+      <div class="card">
+          <div class="item item-body item-text-wrap">
+               <img class="full-image" ng-src="{{baseURL+toy.url}}" alt="{{toy.name}}">
+                <span class="badge badge-assertive">{{toy.label}}</span></h2>
+				<p class="center"> 
+					<button class="button icon ion-thumbsup positive" ng-click="doRate('UP')"> {{toy.rateUp}}</button>  
+					<button class="button icon ion-thumbsdown positive" ng-click="doRate('DOWN')"> {{toy.rateDown}} </button> 
+		  		</p>
+	
+             </div>
+
+                <p>{{toy.description}}</p>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

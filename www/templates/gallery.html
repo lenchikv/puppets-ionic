@@ -1,0 +1,35 @@
+<ion-view view-title="Gallery">
+    <ion-nav-buttons side="secondary">
+      <div class="buttons">
+        <button class="button button-icon icon ion-ios-more"
+          ng-click="popover.show($event)"></button>
+      </div>
+    </ion-nav-buttons>
+	
+<div class="tabs-striped tabs-color-balanced">
+    <ul class="tabs">
+        <li ng-class="{active:isSelected(1)}" class="tab-item">
+            <a ng-click="select(1)">All</a></li>
+        <li ng-class="{active:isSelected(2)}" class="tab-item">
+            <a ng-click="select(2)">Animals</a></li>
+        <li ng-class="{active:isSelected(3)}" class="tab-item">
+            <a ng-click="select(3)">People</a></li>
+        <li ng-class="{active:isSelected(4)}" class="tab-item">
+            <a  ng-click="select(4)">Pillows</a></li>
+    </ul>
+  </div>
+ <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="toy in toys | filter:filtText | orderBy:ordering" href="#/app/gallery/{{toy.id}}" class="item-thumbnail-left">
+        <img ng-src="{{baseURL+toy.thumbUrl}}">
+        <h2 class="center positive">{{toy.caption}}
+        <span class="badge badge-assertive">{{dish.label}}</span></h2>
+        <p>{{toy.description}}</p>
+		<p class="center"> 
+			<a class="button icon ion-thumbsup positive" ng-click="doRate('UP', toy)" ng-model="toy.rates.rateUp"> {{toy.rateUp}}</a>  
+			<a class="button icon ion-thumbsdown positive" ng-click="doRate('DOWN', toy)" ng-model="toy.rates.rateDown"> {{toy.rateDown}} </a> 
+		</p>
+		</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+/* Empty. Add your own CSS if you like */
+.pane1 {
+        background: url("http://localhost:3000/images/gallery1.jpg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+.pane2 {
+        background: url("http://localhost:3000/images/gallery2.jpg") no-repeat left center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+.pane3 {
+        background: url("http://localhost:3000/images/gallery3.jpg") no-repeat left center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+span.badge {
+	margin-top: 10px;
+}
+.center {
+	text-align: center;
+}

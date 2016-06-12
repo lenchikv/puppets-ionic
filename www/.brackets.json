@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/html/Cap/ionic/puppet/www/lib/ionic/js/ionic.min.js",
+        "D:/html/Cap/ionic/puppet/www/lib/ionic/js/ionic.js",
+        "D:/html/Cap/ionic/puppet/www/lib/ionic/js/ionic.bundle.min.js"
+    ]
+}

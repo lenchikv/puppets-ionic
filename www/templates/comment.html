@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title center positive">Your comment</h1>
+    <div class="buttons">
+      <button class="button button-clear button-balanced" ng-click="closeComment()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form name="commentForm" ng-submit="sendComment()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="userComment.name">
+        </label>
+      <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="userComment.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Your Feedback</span>
+            <textarea type="text" ng-model="userComment.comment"></textarea>
+        </label>
+        <label class="item">
+          <button class="button button-block button-balanced" type="submit">Send comment</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,25 @@
+<ion-view view-title="Comments">
+     <ion-nav-buttons side="secondary">
+    </ion-nav-buttons>
+  <ion-content>
+	  
+	
+	<h3 class="positive center">Customer Comments</h3>  
+	
+	  <button type="button" class="button button-block button-balanced"
+          ng-click="comment()">Leave your comment</button>  
+	  <div class="card" ng-repeat="comment in comments | orderBy: '-id'">
+		  <div class="item item-divider">
+			<em class="positive">{{comment.name}}:</em>
+		  </div>
+		  <div class="item item-text-wrap">
+			{{comment.comment}}
+		  </div>
+		  <div class="item item-divider" ng-show="comment.createdAt">
+			Posted: {{comment.createdAt | date:'MMM. dd, yyyy'}}
+		  </div>
+	  </div>
+	  <p></p>
+
+  </ion-content>
+</ion-view>
